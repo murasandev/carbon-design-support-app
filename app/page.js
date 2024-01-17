@@ -3,15 +3,18 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import Profile from '@/components/Profile'
 import { Accordion,AccordionItem, AccordionSkeleton, Button, ActionableNotification } from '@carbon/react'
+import Header from '@/components/Header'
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <Profile />
-        <Button kind="danger">Danger</Button>
+        <div className={styles.header}>
+          <Header />
+          <Profile />
+          <Button kind="danger">Danger</Button>
         <Accordion className="custom-class">
-          <AccordionItem title="Panel A">Test</AccordionItem>
+          <AccordionItem title="Panel A"></AccordionItem>
           <AccordionItem title="Panel B">Panel B</AccordionItem>
           <AccordionItem title="Panel C">Panel C</AccordionItem>
         </Accordion>
@@ -26,6 +29,10 @@ export default function Home() {
           subtitle="Subtitle text goes here"
           title="Notification title"
         />
+        </div>
+        
+        
+        
         {/* <p>
           Get started by editing&nbsp;
           <code className={styles.code}>app/page.js</code>
@@ -47,9 +54,9 @@ export default function Home() {
             />
           </a>
         </div>
-      </div> */}
+      </div>
 
-      {/* <div className={styles.center}>
+      <div className={styles.center}>
         <Image
           className={styles.logo}
           src="/next.svg"
@@ -58,9 +65,9 @@ export default function Home() {
           height={37}
           priority
         />
-      </div> */}
+      </div>
 
-      {/* <div className={styles.grid}>
+      <div className={styles.grid}>
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
@@ -71,9 +78,9 @@ export default function Home() {
             Docs <span>-&gt;</span>
           </h2>
           <p>Find in-depth information about Next.js features and API.</p>
-        </a> */}
+        </a>
 
-        {/* <a
+        <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
           target="_blank"

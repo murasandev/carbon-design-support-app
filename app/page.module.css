@@ -227,3 +227,9 @@
     transform: rotate(0deg);
   }
 }
+
+.header{
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
