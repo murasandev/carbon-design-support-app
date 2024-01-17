@@ -1,36 +1,52 @@
 'use client'
-import Image from 'next/image'
+import map from '../images/locationsimage.png'
 import styles from './page.module.css'
 import Profile from '@/components/Profile'
-import { Accordion,AccordionItem, AccordionSkeleton, Button, ActionableNotification } from '@carbon/react'
-import Header from '@/components/Header'
+import { Accordion,AccordionItem, AccordionSkeleton, Button, ActionableNotification, ContentSwitcher, Switch } from '@carbon/react'
+import Sidebar from '@/components/Sidebar'
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <div className={styles.header}>
-          <Header />
-          <Profile />
-          <Button kind="danger">Danger</Button>
-        <Accordion className="custom-class">
-          <AccordionItem title="Panel A"></AccordionItem>
-          <AccordionItem title="Panel B">Panel B</AccordionItem>
-          <AccordionItem title="Panel C">Panel C</AccordionItem>
-        </Accordion>
-        <ActionableNotification
-          actionButtonLabel="Action"
-          aria-label="closes notification"
-          kind="error"
-          onActionButtonClick={function noRefCheck(){}}
-          onClose={function noRefCheck(){}}
-          onCloseButtonClick={function noRefCheck(){}}
-          statusIconDescription="notification"
-          subtitle="Subtitle text goes here"
-          title="Notification title"
-        />
+        <div className={styles.support}>
+          <div className={styles.header}>
+            <Sidebar />
+
+            <Accordion className="custom-class">
+              <AccordionItem title="Panel A"></AccordionItem>
+              <AccordionItem title="Panel B">Panel B</AccordionItem>
+              <AccordionItem title="Panel C">Panel C</AccordionItem>
+            </Accordion>
+
+            <Button kind="danger">Contact Us</Button>
+
+            <ActionableNotification
+              actionButtonLabel="Action"
+              aria-label="closes notification"
+              kind="error"
+              onActionButtonClick={function noRefCheck(){}}
+              onClose={function noRefCheck(){}}
+              onCloseButtonClick={function noRefCheck(){}}
+              statusIconDescription="notification"
+              subtitle="Subtitle text goes here"
+              title="Notification title"
+            />
+          </div>
+          <div className={styles.switcherHolder}>
+            {/* put map here */}
+            <div className={styles.mapHolder}></div>
+            <ContentSwitcher className={styles.switcher}
+              onChange={(obj) => {
+                let { index, name, text } = obj;
+                // alert(`index: ${index} ||  name: ${name} || text: ${text}`);
+              }}>
+              <Switch name="locations" text="Our Offices" />
+              <Switch name="tech-support" text="Tech Support" />
+              <Switch name="contact" text="Chat Support" />
+            </ContentSwitcher>
+          </div>
         </div>
-        
         
         
         {/* <p>
