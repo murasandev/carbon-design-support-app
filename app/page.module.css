@@ -251,9 +251,41 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: auto;
   border-color: black;
   border-style: solid;
   border-width: 1px;
+}
+
+.columnHolder {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.columnLeft,
+.columnRight {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: inset 5em 5em 10em black;
+  position: relative;
+}
+
+
+.columnRight{
+  background-image: url(/images/London.jpeg);
+}
+
+.columnRight h1,
+.columnLeft h1 {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
 }
 
 .mapHolder {
@@ -262,5 +294,5 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  background-image: url(../images/locationsimage.png);
+  /* background-image: url(../images/locationsimage.png); */
 }
