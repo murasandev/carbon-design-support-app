@@ -271,12 +271,15 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: inset 5em 5em 10em black;
+  box-shadow: inset 3em 5em 10em black;
   position: relative;
 }
 
+.columnLeft {
+  background-image: url(/images/Honolulu.jpg);
+}
 
-.columnRight{
+.columnRight {
   background-image: url(/images/London.jpeg);
 }
 

@@ -25,7 +25,6 @@ export default function Home() {
           <div className={styles.switcherHolder}>
             <div className={styles.columnHolder}>
               <div className={styles.columnLeft}>
-                {/* <img src='./images/Honolulu.jpeg' alt='hnl.jpg' width='100%' height='auto'></img> */}
                 <h1>Honolulu</h1>
               </div>
               <div className={styles.columnRight}>
